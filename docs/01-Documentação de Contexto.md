@@ -4,7 +4,7 @@ Atualmente, as notícias e informações são essenciais no dia a dia das pessoa
 
 Com o aumento do número de plataformas, como sites, fóruns, blogs e jornais, as pessoas frequentemente perdem o interesse em procurar novas informações, pois muitas vezes encontram inúmeras notícias que não condizem com seus interesses. 
 
-Segundo uma pesquisa realizada pelo jornal Nexo em 2022, intitulada "O aumento do desinteresse no noticiário no Brasil", foi observado que mais da metade dos brasileiros, 54% dos entrevistados, evitam o consumo de produtos jornalísticos. Além disso, a pesquisa mostra que a natureza e o tom dos temas, bem como a repetição de certos assuntos em diferentes veículos, foram apontados como as principais razões para justificar esse desinteresse.
+Segundo uma pesquisa realizada pelo jornal Nexo em 2022, intitulada "O aumento do desinteresse no noticiário no Brasil" ( Gaglioni, César; 2022), foi observado que mais da metade dos brasileiros, 54% dos entrevistados, evitam o consumo de produtos jornalísticos. Além disso, a pesquisa mostra que a natureza e o tom dos temas, bem como a repetição de certos assuntos em diferentes veículos, foram apontados como as principais razões para justificar esse desinteresse.
 
 # Problema
 
