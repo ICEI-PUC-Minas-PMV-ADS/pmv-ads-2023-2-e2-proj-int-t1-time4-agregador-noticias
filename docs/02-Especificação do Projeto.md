@@ -18,7 +18,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-008 | O usuário deve ser capaz de excluir notícia                     | BAIXA      |
 | RF-009 | O usuário deve ser capaz de filtrar as notícias                 | BAIXA      |
 | RF-010 | Site deve ter um sistema de “tags”                              | MÉDIA      |
-| RF-011 | Site deve exibir o usuário que adicionou a notícia              | BAIXA      |
+| RF-011 | Site deve ter um sistema de filtro por tempo                    | BAIXA      |
+| RF-012 | Site deve exibir o usuário que adicionou a notícia              | BAIXA      |
+| RF-013 | O administrador deve ser capaz de gerenciar usuários            | ALTA       |
+| RF-014 | O administrador deve ser capaz de gerenciar notícias            | ALTA       |
 
 ### Requisitos não Funcionais
 
