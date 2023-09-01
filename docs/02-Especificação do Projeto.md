@@ -47,3 +47,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 | 04  | A aplicação deve ser desenvolvida inteiramente com módulos Back-End                                                                     |
 | 05  | A equipe de projeto será restrita aos membros do grupo.                                                                                 |
 | 06  | A aplicação interativa não deve demandar pagamento.                                                                                     |
+
+## Diagrama de Casos de Uso
+
+![Diagrama de casos de Uso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/blob/main/docs/img/diagrama%20de%20casos%20de%20uso.png)
