@@ -37,9 +37,9 @@ O grupo está organizado da seguinte forma:
 
 Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Projects nativo do Github, estruturado com as seguintes listas: 
 
-	- `To Do`: Esta lista representa o Sprint Backlog. Este é o Sprint atual que está sendo trabalhado.
-	- `Doing`: Quando uma tarefa tiver sido atribuída a um dos membros, ela é movida para essa seção.
-	- `Done`: nesta seção são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário.
+- **To Do:** Esta lista representa o Sprint Backlog. Este é o Sprint atual que está sendo trabalhado.
+- **Doing:** Quando uma tarefa tiver sido atribuída a um dos membros, ela é movida para essa seção.
+- **Done:** nesta seção são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário.
 
 
 O backlog pode ser acessado pelo link https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/566/views/1.
