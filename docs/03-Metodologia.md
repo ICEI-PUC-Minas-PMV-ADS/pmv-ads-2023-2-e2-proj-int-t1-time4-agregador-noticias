@@ -9,11 +9,8 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 |Ambiente                       |Plataforma  |Link de acesso                                                                                                          |
 |---------------------------    |----------  |------------------------------------------------------------------------------------------------------------------------|
 |Repositório de código-fonte    |GitHub      |https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias|
-|Documentos do projeto          |Google Drive|???| 
 |Gerenciamento do projeto       |GitHub Projects|https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/566/views/1|
-|Gerenciamento de diagramas     |a verificar|| 
 |Gerenciamento de wireframes    |Figma|https://www.figma.com/| 
-|Gerenciamento do banco de dados|SQL Server Management Studio|???|
 |Gerenciamento de código-fonte|Visual Studio|https://code.visualstudio.com/docs/?dv=win|
 |Serviço de hospedagem da aplicação|???|???|                   
 
