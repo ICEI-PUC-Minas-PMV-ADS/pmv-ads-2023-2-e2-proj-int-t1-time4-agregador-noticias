@@ -1,4 +1,5 @@
 # Projeto de Interface
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/assets/111918966/a35a7154-b51f-4909-adb5-de38055f5407)
 
 O projeto busca atender as espectivas do usuário de maneira simples e dinamica, onde o foco é simplesmente a notícia. Mantando uma interface limpa e responsiva ao desktop e dispositivos móveis.
 
