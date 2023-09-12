@@ -26,6 +26,12 @@ Tela onde o usuário fará seu log in no site ou caso ainda não o tenha, criar�
 
 ![login_page](img/wireframes/Login_page.png)
 
+### Tela de Administrador
+
+Tela onde o administrador irá gerenciar os usuários.
+
+![admin_page](img/wireframes/Admin_page.png)
+
 ### Tela de novo usuário
 
 Tela onde o usuário irá se cadastrar, caso ainda não seja cadastrado.
