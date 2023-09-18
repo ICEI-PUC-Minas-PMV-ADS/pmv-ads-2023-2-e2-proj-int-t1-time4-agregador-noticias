@@ -3,6 +3,9 @@
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/assets/111918966/9b473241-20f2-4e12-95b6-25d2ba02cc34)
 
+*Fluxo administrador*
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/assets/111918966/f2d4a0b2-ba64-473a-b42d-d6a83fff9e75)
 
 O projeto busca atender as espectivas do usuário de maneira simples e dinamica, onde o foco é simplesmente a notícia. Mantando uma interface limpa e responsiva ao desktop e dispositivos móveis.
 
