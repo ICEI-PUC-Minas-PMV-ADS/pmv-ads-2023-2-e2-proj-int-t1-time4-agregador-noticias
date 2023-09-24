@@ -5,8 +5,8 @@
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
 ## Diagrama de Classes
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/assets/111918966/48d4dcb4-5f89-4be1-89da-dd232f688630)
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/assets/111918966/a96c6a65-74c9-47a1-b981-79fd62f235e5)
 
 
 
