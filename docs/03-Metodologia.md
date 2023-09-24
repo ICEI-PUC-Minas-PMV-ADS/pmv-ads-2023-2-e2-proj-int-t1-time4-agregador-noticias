@@ -12,7 +12,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 |Gerenciamento do projeto       |GitHub Projects|https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/566/views/1|
 |Gerenciamento de wireframes    |Figma|https://www.figma.com/| 
 |Gerenciamento de código-fonte|Visual Studio|https://code.visualstudio.com/docs/?dv=win|
-|Serviço de hospedagem da aplicação|???|???|                   
+|Serviço de hospedagem da aplicação|replit|https://replit.com/|                   
 
 ## Gestão de Código Fonte
 
