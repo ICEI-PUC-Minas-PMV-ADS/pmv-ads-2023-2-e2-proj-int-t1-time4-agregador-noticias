@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "t2JASxVPW1hmX4mHPMt1LKCc+TRTOuEMJ3FBLnthdsAEXqOZIwpL5kBJdfrkGyRZIaePZmJDYdogTWfZD1H/2Q==",
+  "dgSpecHash": "aFm1G5P3tJSu/sJwJdIbteIAHCS7MvZzeKCBKty4+SxUUtmIVAUrfnS6i6l0Ey6kLEBbMXdaklaDBRIot09e6A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Renato Ruiz\\Documents\\puc\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\Tech-news\\Tech-news.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,8 @@
     "C:\\Users\\Renato Ruiz\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\Renato Ruiz\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\Renato Ruiz\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\Renato Ruiz\\.nuget\\packages\\jquery\\3.7.1\\jquery.3.7.1.nupkg.sha512",
+    "C:\\Users\\Renato Ruiz\\.nuget\\packages\\jquery.maskedinput\\1.4.1\\jquery.maskedinput.1.4.1.nupkg.sha512",
     "C:\\Users\\Renato Ruiz\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Renato Ruiz\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Renato Ruiz\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
