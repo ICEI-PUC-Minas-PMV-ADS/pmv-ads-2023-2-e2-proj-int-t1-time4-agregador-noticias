@@ -1080,3 +1080,4 @@ C:\Users\pedro\Source\Repos\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-notici
 C:\Users\pedro\Source\Repos\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\tech-news\obj\Debug\net6.0\Tech-news.pdb
 C:\Users\pedro\Source\Repos\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\tech-news\obj\Debug\net6.0\Tech-news.genruntimeconfig.cache
 C:\Users\pedro\Source\Repos\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\tech-news\obj\Debug\net6.0\ref\Tech-news.dll
+C:\Users\pedro\source\repos\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\tech-news\bin\Debug\net6.0\BCrypt.Net-Next.dll

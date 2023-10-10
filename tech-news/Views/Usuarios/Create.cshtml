@@ -40,25 +40,4 @@
         </form>
     </div>
 </div>
-
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#Senha').on('input', function () {
-                var senhaInput = $(this).val(); // Obtém o valor atual do campo de senha
-                var senhaMask = '';
-
-                // Cria uma máscara com a mesma quantidade de '*' que caracteres na senha
-                for (var i = 0; i < senhaInput.length; i++) {
-                    senhaMask += '*';
-                }
-
-                $(this).val(senhaMask); // Define o valor do campo como a máscara
-            });
-        });
-    </script>
 }

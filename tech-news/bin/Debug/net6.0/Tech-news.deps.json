@@ -34,6 +34,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Tech-news/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.19",
           "Microsoft.EntityFrameworkCore": "6.0.21",
           "Microsoft.EntityFrameworkCore.Design": "6.0.21",
@@ -41,8 +42,6 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.19",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.18.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
-          "jQuery": "3.7.1",
-          "jQuery.MaskedInput": "1.4.1",
           "Microsoft.AspNetCore.Antiforgery": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "6.0.0.0",
@@ -337,6 +336,17 @@
         },
         "compile": {
           "Tech-news.dll": {}
+        }
+      },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {}
         }
       },
       "Humanizer/2.14.1": {
@@ -880,12 +890,6 @@
           "lib/net6.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
           }
-        }
-      },
-      "jQuery/3.7.1": {},
-      "jQuery.MaskedInput/1.4.1": {
-        "dependencies": {
-          "jQuery": "3.7.1"
         }
       },
       "MessagePack/2.1.152": {
@@ -4760,6 +4764,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
+    },
     "Humanizer/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -5109,20 +5120,6 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
-    },
-    "jQuery/3.7.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-rF8hnQxmBMlIspf8VN72bALtmIpKx6hKRpUdTOkp/8JzfF8KgNqHut5lOy9kFGvFIStumCqJ+PBxpI9gxpRYfQ==",
-      "path": "jquery/3.7.1",
-      "hashPath": "jquery.3.7.1.nupkg.sha512"
-    },
-    "jQuery.MaskedInput/1.4.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-U/XBjJtENm8HhAm5PjOxlaH+q13PpTJpvDJOPg1bTU0uMssn8pXalqgIqYyg9dvytfodAPneOSwXBG+FxetELA==",
-      "path": "jquery.maskedinput/1.4.1",
-      "hashPath": "jquery.maskedinput.1.4.1.nupkg.sha512"
     },
     "MessagePack/2.1.152": {
       "type": "package",

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -594,15 +607,6 @@
           "lib/net6.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
           }
-        }
-      },
-      "jQuery/3.7.1": {
-        "type": "package"
-      },
-      "jQuery.MaskedInput/1.4.1": {
-        "type": "package",
-        "dependencies": {
-          "jQuery": "1.9.0"
         }
       },
       "MessagePack/2.1.152": {
@@ -3798,6 +3802,37 @@
     }
   },
   "libraries": {
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
+      ]
+    },
     "Humanizer/2.14.1": {
       "sha512": "/FUTD3cEceAAmJSCPN9+J+VhGwmL/C12jvwlyM1DFXShEMsBzvLzLqSrJ2rb+k/W2znKw7JyflZgZpyE+tI7lA==",
       "type": "package",
@@ -4542,42 +4577,6 @@
         "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll",
         "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll",
         "logo.png"
-      ]
-    },
-    "jQuery/3.7.1": {
-      "sha512": "rF8hnQxmBMlIspf8VN72bALtmIpKx6hKRpUdTOkp/8JzfF8KgNqHut5lOy9kFGvFIStumCqJ+PBxpI9gxpRYfQ==",
-      "type": "package",
-      "path": "jquery/3.7.1",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Content/Scripts/jquery-3.7.1-vsdoc.js",
-        "Content/Scripts/jquery-3.7.1.js",
-        "Content/Scripts/jquery-3.7.1.min.js",
-        "Content/Scripts/jquery-3.7.1.min.map",
-        "Content/Scripts/jquery-3.7.1.slim.js",
-        "Content/Scripts/jquery-3.7.1.slim.min.js",
-        "Content/Scripts/jquery-3.7.1.slim.min.map",
-        "Tools/common.ps1",
-        "Tools/install.ps1",
-        "Tools/jquery-3.7.1.intellisense.js",
-        "Tools/uninstall.ps1",
-        "jquery.3.7.1.nupkg.sha512",
-        "jquery.nuspec"
-      ]
-    },
-    "jQuery.MaskedInput/1.4.1": {
-      "sha512": "U/XBjJtENm8HhAm5PjOxlaH+q13PpTJpvDJOPg1bTU0uMssn8pXalqgIqYyg9dvytfodAPneOSwXBG+FxetELA==",
-      "type": "package",
-      "path": "jquery.maskedinput/1.4.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/scripts/jquery.maskedinput.js",
-        "content/scripts/jquery.maskedinput.min.js",
-        "jquery.maskedinput.1.4.1.nupkg.sha512",
-        "jquery.maskedinput.nuspec"
       ]
     },
     "MessagePack/2.1.152": {
@@ -10929,15 +10928,14 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BCrypt.Net-Next >= 4.0.3",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 6.0.19",
       "Microsoft.EntityFrameworkCore >= 6.0.21",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.19",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.19",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.18.1",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16",
-      "jQuery >= 3.7.1",
-      "jQuery.MaskedInput >= 1.4.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16"
     ]
   },
   "packageFolders": {
@@ -10946,11 +10944,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
+      "projectUniqueName": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
       "projectName": "Tech-news",
-      "projectPath": "C:\\Users\\pedro\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
+      "projectPath": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\obj\\",
+      "outputPath": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10979,6 +10977,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "BCrypt.Net-Next": {
+            "target": "Package",
+            "version": "[4.0.3, )"
+          },
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",
             "version": "[6.0.19, )"
@@ -11010,14 +11012,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.16, )"
-          },
-          "jQuery": {
-            "target": "Package",
-            "version": "[3.7.1, )"
-          },
-          "jQuery.MaskedInput": {
-            "target": "Package",
-            "version": "[1.4.1, )"
           }
         },
         "imports": [

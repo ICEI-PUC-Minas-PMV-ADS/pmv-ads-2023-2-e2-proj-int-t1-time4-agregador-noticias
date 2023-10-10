@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tech_news.Models;
-using Microsoft.EntityFrameworkCore.Design;
-
 
 namespace Tech_news.Controllers
 {
@@ -29,6 +27,7 @@ namespace Tech_news.Controllers
         {
             if (ModelState.IsValid) //se os campos obrigatórios estiverem tds preenchidos
             {
+                usuarios.Senha = BCrypt.Net.BCrypt.HashPassword(usuarios.Senha);
                 _context.Usuarios.Add(usuarios); //adiciona usuário ao bd
                 await _context.SaveChangesAsync(); //salva as alterações 
                 return RedirectToAction("Index"); //retorna ao index
@@ -56,6 +55,7 @@ namespace Tech_news.Controllers
 
             if (ModelState.IsValid)
             {
+                usuarios.Senha = BCrypt.Net.BCrypt.HashPassword(usuarios.Senha);
                 _context.Usuarios.Update(usuarios);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");

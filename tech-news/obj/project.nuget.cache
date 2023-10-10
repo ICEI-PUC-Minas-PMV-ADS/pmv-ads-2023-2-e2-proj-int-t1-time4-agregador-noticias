@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bdbIxzdRk1HpCapvHihnd9W/0nEqT+OOdC6GALZaykJ9q34yfv5jhbKIknBinlhNyVrg8GjRkjr4k1JsgDCp4Q==",
+  "dgSpecHash": "nyVEc5Q2idNlrLEyJQr0iM7LZV9+ZB0qQKpmuQJrLNofbM+n6ENxbD6cMnJZtcFUM3r1k2BpLLIj6RFFKGghXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pedro\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -54,8 +55,6 @@
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\jquery\\3.7.1\\jquery.3.7.1.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\jquery.maskedinput\\1.4.1\\jquery.maskedinput.1.4.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
