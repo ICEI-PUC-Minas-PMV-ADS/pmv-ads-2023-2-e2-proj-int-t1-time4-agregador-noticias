@@ -10944,11 +10944,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulo\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
+      "projectUniqueName": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\Tech-news.csproj",
       "projectName": "Tech-news",
-      "projectPath": "C:\\Users\\paulo\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
+      "projectPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\Tech-news.csproj",
       "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paulo\\Source\\Repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\obj\\",
+      "outputPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",

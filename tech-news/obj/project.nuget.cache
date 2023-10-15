@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mGCM7DG1g80qG0PcIzEwxGoEUEe/d3Jdt9hS1oh0VVh+qJeGiUIqOsWe8lQJLIrcTEsrDZl570uR0KuN8+v03Q==",
+  "dgSpecHash": "r/mIg7tNhvWo/lyH1jHvvBWg0S52T5pch+Pd33hJ3CVVkMmgQRW9PvAiTHgdk6YPh2cX++UXhbZToEK99Wt10g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paulo\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
+  "projectFilePath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\Tech-news.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
