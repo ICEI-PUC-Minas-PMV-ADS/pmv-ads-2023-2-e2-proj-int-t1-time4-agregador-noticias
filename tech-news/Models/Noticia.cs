@@ -10,7 +10,7 @@ namespace Tech_news.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o título!")]
-        public int Titulo { get; set; }
+        public string Titulo { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o link!")]
         public string Link { get; set; }
