@@ -9,7 +9,7 @@ namespace Tech_news.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Noticias",
+                name: "Noticia",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -19,7 +19,7 @@ namespace Tech_news.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Noticias", x => x.Id);
+                    table.PrimaryKey("PK_Noticia", x => x.Id);
                 });
         }
 

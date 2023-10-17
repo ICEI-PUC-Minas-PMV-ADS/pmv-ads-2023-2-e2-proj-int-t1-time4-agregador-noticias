@@ -10,7 +10,7 @@ namespace Tech_news.Migrations
         {
             migrationBuilder.AlterColumn<string>(
                 name: "Titulo",
-                table: "Noticias",
+                table: "Noticia",
                 type: "nvarchar(max)",
                 nullable: false,
                 oldClrType: typeof(int),
@@ -21,7 +21,7 @@ namespace Tech_news.Migrations
         {
             migrationBuilder.AlterColumn<int>(
                 name: "Titulo",
-                table: "Noticias",
+                table: "Noticia",
                 type: "int",
                 nullable: false,
                 oldClrType: typeof(string),

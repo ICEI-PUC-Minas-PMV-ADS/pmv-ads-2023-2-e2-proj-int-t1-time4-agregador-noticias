@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Tech_news.Models
 {
-    [Table("Noticias")]
+    [Table("Noticia")]
     public class Noticia
     {
         [Key]
@@ -14,5 +14,6 @@ namespace Tech_news.Models
 
         [Required(ErrorMessage = "Obrigatório informar o link!")]
         public string Link { get; set; }
+
     }
 }
