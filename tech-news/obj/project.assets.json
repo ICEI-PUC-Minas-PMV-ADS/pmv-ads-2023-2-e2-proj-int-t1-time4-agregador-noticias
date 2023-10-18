@@ -10939,19 +10939,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Renato Ruiz\\.nuget\\packages\\": {}
+    "C:\\Users\\pedro\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Renato Ruiz\\Documents\\puc\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
+      "projectUniqueName": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v1\\tech-news\\Tech-news.csproj",
       "projectName": "Tech-news",
-      "projectPath": "C:\\Users\\Renato Ruiz\\Documents\\puc\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\Tech-news.csproj",
-      "packagesPath": "C:\\Users\\Renato Ruiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Renato Ruiz\\Documents\\puc\\pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias\\tech-news\\obj\\",
+      "projectPath": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v1\\tech-news\\Tech-news.csproj",
+      "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v1\\tech-news\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Renato Ruiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

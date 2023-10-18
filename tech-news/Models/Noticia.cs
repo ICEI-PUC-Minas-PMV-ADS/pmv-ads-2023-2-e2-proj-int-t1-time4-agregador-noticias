@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Tech_news.Models
 {
-    [Table("Noticia")]
+    [Table("Noticias")]
     public class Noticia
     {
         [Key]
