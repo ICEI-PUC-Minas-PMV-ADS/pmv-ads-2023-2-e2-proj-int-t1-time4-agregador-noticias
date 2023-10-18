@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -6,6 +7,7 @@ using Tech_news.Models;
 
 namespace Tech_news.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UsuariosController : Controller
     {
         private readonly AppDbContext _context;
@@ -20,13 +22,14 @@ namespace Tech_news.Controllers
             return View(dados);
         }
 
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
-
+        [AllowAnonymous]
         public async Task<IActionResult> Login(Usuarios usuarios)
         {
             var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuarios.Email);
@@ -71,6 +74,7 @@ namespace Tech_news.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
@@ -167,8 +171,5 @@ namespace Tech_news.Controllers
             return RedirectToAction("Index");
 
         }
-
-
-
     }
 }
