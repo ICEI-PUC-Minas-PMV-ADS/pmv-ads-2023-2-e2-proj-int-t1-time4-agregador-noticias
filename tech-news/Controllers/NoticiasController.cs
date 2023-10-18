@@ -66,5 +66,20 @@ namespace Tech_news.Controllers
 
             return View();
         }
+
+        public async Task<IActionResult> Details(int? id) 
+        {
+            if (id == null)
+                return NotFound(ModelState);
+            var dados = _context.Noticias.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            return View(dados);
+
+
+        }
+
     }
 }
