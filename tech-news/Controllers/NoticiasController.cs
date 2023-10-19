@@ -81,5 +81,37 @@ namespace Tech_news.Controllers
 
         }
 
+        public async Task<ActionResult> Delete(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _context.Noticias.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            return View(dados);
+
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<ActionResult> DeleteConfirmed(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _context.Noticias.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            _context.Noticias.Remove(dados);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+
+        }
+
     }
 }
