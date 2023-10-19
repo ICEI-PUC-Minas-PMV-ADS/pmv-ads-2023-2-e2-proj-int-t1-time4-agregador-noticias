@@ -37,5 +37,49 @@ namespace Tech_news.Controllers
             }
             return View(noticia);
         }
+
+        public async Task<IActionResult> Edit(int? id) 
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _context.Noticias.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            return View(dados);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, Noticia noticia)
+        {
+            if (id != noticia.Id)
+            return NotFound();
+
+            if (ModelState.IsValid)
+            {
+                _context.Noticias.Update(noticia);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+        public async Task<IActionResult> Details(int? id) 
+        {
+            if (id == null)
+                return NotFound(ModelState);
+            var dados = await _context.Noticias.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            return View(dados);
+
+
+        }
+
     }
 }
