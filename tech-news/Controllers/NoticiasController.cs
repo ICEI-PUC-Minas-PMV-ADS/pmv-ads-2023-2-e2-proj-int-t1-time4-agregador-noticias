@@ -71,7 +71,7 @@ namespace Tech_news.Controllers
         {
             if (id == null)
                 return NotFound(ModelState);
-            var dados = _context.Noticias.FindAsync(id);
+            var dados = await _context.Noticias.FindAsync(id);
 
             if (dados == null)
                 return NotFound();
