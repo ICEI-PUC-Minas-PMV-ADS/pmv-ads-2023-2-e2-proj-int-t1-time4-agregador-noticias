@@ -1,3 +1,12 @@
 # Registros de Testes de Software
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v1dX0oBW0GA?si=PpuLzcIjy_aN2Vdv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## Teste 1 - Login como administrador
+
+https://www.youtube.com/watch?v=v1dX0oBW0GA
+
+## Teste 2 - Login como usuário comum
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v4ZaojLUV_o?si=66nFFGbk3x6Hd6dD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### CT-01 – Cadastrar perfil
+
