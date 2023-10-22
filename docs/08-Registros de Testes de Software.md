@@ -10,3 +10,7 @@ https://www.youtube.com/watch?v=v1dX0oBW0GA
 
 ### CT-01 – Cadastrar perfil
 
+O usuário deve ser capaz de criar uma conta pessoal.
+Por enquanto, apenas perfis de administrador têm permissão de criar contas, portanto essa funcionalidade ainda não foi completamente implementada.
+
+
