@@ -2,11 +2,12 @@
 
 ## Teste 1 - Login como administrador
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v1dX0oBW0GA?si=_tark9heHb9jC8ZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> </iframe>
+[Assista ao vídeo](https://www.youtube.com/watch?v=v1dX0oBW0GA)
 
 ## Teste 2 - Login como usuário comum
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v4ZaojLUV_o?si=pApiJDKAPvR1k-7F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> </iframe>
+[Assista ao vídeo](https://www.youtube.com/watch?v=v4ZaojLUV_o)
+
 ### CT-01 – Cadastrar perfil
 
 O usuário deve ser capaz de criar uma conta pessoal.
