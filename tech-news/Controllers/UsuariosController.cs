@@ -85,15 +85,14 @@ namespace Tech_news.Controllers
         [AllowAnonymous]
         public IActionResult Create()
         {
-            // Check if the current user is in the "Admin" role
             if (User.IsInRole("Admin"))
             {
-                // If the user is an admin, allow them to choose the role
+                // Se for Admin, libera a escolha do Perfil
                 ViewData["AllowRoleSelection"] = true;
             }
             else
             {
-                // If the user is not an admin, set the role to "User" and disable role selection
+                // Se não for Admin, se for User a seleção de usuário será desativada
                 ViewData["AllowRoleSelection"] = false;
             }
 
@@ -106,15 +105,14 @@ namespace Tech_news.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Check if the current user is in the "Admin" role
                 if (User.IsInRole("Admin"))
                 {
-                    // If the user is an admin, allow them to choose the role
+                    // Se for Admin, libera a escolha do Perfil
                     _context.Usuarios.Add(usuarios);
                 }
                 else
                 {
-                    // If the user is not an admin, set the role to "User" and disable role selection
+                    // Se não for Admin, se for User a seleção de usuário será desativada
                     usuarios.Perfil = Perfil.User;
                     _context.Usuarios.Add(usuarios);
                 }
@@ -127,7 +125,7 @@ namespace Tech_news.Controllers
             return View(usuarios);
         }
 
-        public async Task<ActionResult> Edit(int? id) //int? é uma abreviação para Nullable<int>. Isso significa que você pode passar um valor inteiro quando chama o método Edit, ou null
+        public async Task<ActionResult> Edit(int? id)
         {
             if (id == null) 
                 return NotFound();
@@ -169,7 +167,7 @@ namespace Tech_news.Controllers
 
             return View(dados);
         }
-        public async Task<ActionResult> Delete(int? id) //a base é igual ao do Details, a diferença é q ao exibir os dados na tela, ele dá a opção de apagá-los
+        public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
                 return NotFound();
