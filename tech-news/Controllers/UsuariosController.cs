@@ -82,22 +82,51 @@ namespace Tech_news.Controllers
             return RedirectToAction("Login", "Usuarios");
         }
 
-        public IActionResult Create() 
+        [AllowAnonymous]
+        public IActionResult Create()
         {
+            // Check if the current user is in the "Admin" role
+            if (User.IsInRole("Admin"))
+            {
+                // If the user is an admin, allow them to choose the role
+                ViewData["AllowRoleSelection"] = true;
+            }
+            else
+            {
+                // If the user is not an admin, set the role to "User" and disable role selection
+                ViewData["AllowRoleSelection"] = false;
+            }
+
             return View();
         }
+
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Create(Usuarios usuarios)
         {
-            if (ModelState.IsValid) //se os campos obrigatórios estiverem tds preenchidos
+            if (ModelState.IsValid)
             {
+                // Check if the current user is in the "Admin" role
+                if (User.IsInRole("Admin"))
+                {
+                    // If the user is an admin, allow them to choose the role
+                    _context.Usuarios.Add(usuarios);
+                }
+                else
+                {
+                    // If the user is not an admin, set the role to "User" and disable role selection
+                    usuarios.Perfil = Perfil.User;
+                    _context.Usuarios.Add(usuarios);
+                }
+
                 usuarios.Senha = BCrypt.Net.BCrypt.HashPassword(usuarios.Senha);
-                _context.Usuarios.Add(usuarios); //adiciona usuário ao bd
-                await _context.SaveChangesAsync(); //salva as alterações 
-                return RedirectToAction("Index"); //retorna ao index
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
             }
+
             return View(usuarios);
         }
+
         public async Task<ActionResult> Edit(int? id) //int? é uma abreviação para Nullable<int>. Isso significa que você pode passar um valor inteiro quando chama o método Edit, ou null
         {
             if (id == null) 
