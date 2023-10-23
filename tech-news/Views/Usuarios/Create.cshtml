@@ -28,7 +28,7 @@
                 <span asp-validation-for="Senha" class="text-danger"></span>
             </div>
             
-            @if (User.IsInRole("admin"))
+            @if ((bool)ViewData["AllowRoleSelection"])
             {
                 <div class="form-group">
                     <label asp-for="Perfil" class="control-label"></label>

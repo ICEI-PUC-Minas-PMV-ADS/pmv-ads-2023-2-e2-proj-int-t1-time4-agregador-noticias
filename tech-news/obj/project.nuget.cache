@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7rxfgR0zT4VBusRUg4fkd39sZIEaLJP4Nfwph0OxiCwhqe1zUjzMpwQCXTHvY1x2IizORwDLWK6BLm0nIqSSNw==",
+  "dgSpecHash": "Hre7Sc88Sh+ia/6Hgu91D70Og0AkcvHI+IZ+qnbT10LFYjhDRptILXxY7lA2s3FBA8El3GF8CcBiZmt3Y9dbOw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pedro\\source\\repos\\agregador-noticias-v1\\tech-news\\Tech-news.csproj",
+  "projectFilePath": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\Tech-news.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

@@ -10944,11 +10944,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro\\source\\repos\\agregador-noticias-v1\\tech-news\\Tech-news.csproj",
+      "projectUniqueName": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\Tech-news.csproj",
       "projectName": "Tech-news",
-      "projectPath": "C:\\Users\\pedro\\source\\repos\\agregador-noticias-v1\\tech-news\\Tech-news.csproj",
+      "projectPath": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\Tech-news.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro\\source\\repos\\agregador-noticias-v1\\tech-news\\obj\\",
+      "outputPath": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
