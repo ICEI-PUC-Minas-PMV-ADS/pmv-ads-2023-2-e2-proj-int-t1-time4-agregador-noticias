@@ -82,23 +82,50 @@ namespace Tech_news.Controllers
             return RedirectToAction("Login", "Usuarios");
         }
 
-        public IActionResult Create() 
+        [AllowAnonymous]
+        public IActionResult Create()
         {
+            if (User.IsInRole("Admin"))
+            {
+                // Se for Admin, libera a escolha do Perfil
+                ViewData["AllowRoleSelection"] = true;
+            }
+            else
+            {
+                // Se não for Admin, se for User a seleção de usuário será desativada
+                ViewData["AllowRoleSelection"] = false;
+            }
+
             return View();
         }
+
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Create(Usuarios usuarios)
         {
-            if (ModelState.IsValid) //se os campos obrigatórios estiverem tds preenchidos
+            if (ModelState.IsValid)
             {
+                if (User.IsInRole("Admin"))
+                {
+                    // Se for Admin, libera a escolha do Perfil
+                    _context.Usuarios.Add(usuarios);
+                }
+                else
+                {
+                    // Se não for Admin, se for User a seleção de usuário será desativada
+                    usuarios.Perfil = Perfil.User;
+                    _context.Usuarios.Add(usuarios);
+                }
+
                 usuarios.Senha = BCrypt.Net.BCrypt.HashPassword(usuarios.Senha);
-                _context.Usuarios.Add(usuarios); //adiciona usuário ao bd
-                await _context.SaveChangesAsync(); //salva as alterações 
-                return RedirectToAction("Index"); //retorna ao index
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
             }
+
             return View(usuarios);
         }
-        public async Task<ActionResult> Edit(int? id) //int? é uma abreviação para Nullable<int>. Isso significa que você pode passar um valor inteiro quando chama o método Edit, ou null
+
+        public async Task<ActionResult> Edit(int? id)
         {
             if (id == null) 
                 return NotFound();
@@ -140,7 +167,7 @@ namespace Tech_news.Controllers
 
             return View(dados);
         }
-        public async Task<ActionResult> Delete(int? id) //a base é igual ao do Details, a diferença é q ao exibir os dados na tela, ele dá a opção de apagá-los
+        public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
                 return NotFound();
