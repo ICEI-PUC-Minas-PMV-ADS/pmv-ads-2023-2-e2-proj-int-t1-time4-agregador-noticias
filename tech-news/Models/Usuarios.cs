@@ -21,6 +21,8 @@ namespace Tech_news.Models
 
         [Required(ErrorMessage = "Obrigatório informar a perfil!")]
         public Perfil Perfil { get; set; }
+
+        public ICollection<Noticia> Noticias { get; set; } = new List<Noticia>();
     }
 
     public enum Perfil
