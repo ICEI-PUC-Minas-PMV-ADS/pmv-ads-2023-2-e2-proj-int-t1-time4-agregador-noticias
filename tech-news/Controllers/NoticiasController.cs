@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using Tech_news.Models;
 
 namespace Tech_news.Controllers
@@ -31,6 +32,10 @@ namespace Tech_news.Controllers
         {
             if (ModelState.IsValid)
             {
+                int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+                noticia.UsuarioId = usuarioId;
+
                 _context.Add(noticia);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -71,13 +76,15 @@ namespace Tech_news.Controllers
         {
             if (id == null)
                 return NotFound(ModelState);
-            var dados = await _context.Noticias.FindAsync(id);
+            
+            var dados = await _context.Noticias
+                .Include(d => d.Usuarios)
+                .FirstOrDefaultAsync(d => d.Id == id);
 
             if (dados == null)
                 return NotFound();
 
             return View(dados);
-
 
         }
 
@@ -112,6 +119,5 @@ namespace Tech_news.Controllers
             return RedirectToAction("Index");
 
         }
-
     }
 }

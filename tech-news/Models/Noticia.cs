@@ -15,5 +15,8 @@ namespace Tech_news.Models
         [Required(ErrorMessage = "Obrigatório informar o link!")]
         public string Link { get; set; }
 
+        public int UsuarioId { get; set; }
+
+        public Usuarios Usuarios { get; set; }
     }
 }
