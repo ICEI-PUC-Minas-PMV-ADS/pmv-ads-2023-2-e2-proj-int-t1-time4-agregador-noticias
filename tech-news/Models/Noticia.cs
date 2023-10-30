@@ -17,6 +17,10 @@ namespace Tech_news.Models
 
         public int UsuarioId { get; set; }
 
+        [Display(Name = "Data da Publicação")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime DataPublicacao { get; set; }
+
         public Usuarios Usuarios { get; set; }
     }
 }

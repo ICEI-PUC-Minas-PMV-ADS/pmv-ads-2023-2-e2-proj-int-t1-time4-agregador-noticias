@@ -35,6 +35,7 @@ namespace Tech_news.Controllers
                 int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
                 noticia.UsuarioId = usuarioId;
+                noticia.DataPublicacao = DateTime.Now;
 
                 _context.Add(noticia);
                 await _context.SaveChangesAsync();

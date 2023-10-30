@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\Tech-news.csproj": {}
+    "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\Tech-news.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\Tech-news.csproj": {
+    "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\Tech-news.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\Tech-news.csproj",
+        "projectUniqueName": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\Tech-news.csproj",
         "projectName": "Tech-news",
-        "projectPath": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\Tech-news.csproj",
-        "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pedro\\Source\\Repos\\agregador-noticias-v2\\tech-news\\obj\\",
+        "projectPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\Tech-news.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\paulo\\OneDrive\\Área de Trabalho\\projeto agregador de noticias\\tech-news\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

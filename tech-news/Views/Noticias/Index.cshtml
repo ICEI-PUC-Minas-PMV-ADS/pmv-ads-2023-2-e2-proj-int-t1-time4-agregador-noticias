@@ -18,6 +18,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Link)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataPublicacao)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -28,6 +31,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPublicacao)
             </td>
 
                 @if (User.IsInRole("Admin"))
