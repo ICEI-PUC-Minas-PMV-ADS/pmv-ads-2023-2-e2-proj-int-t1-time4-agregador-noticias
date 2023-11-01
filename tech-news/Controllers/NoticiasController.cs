@@ -35,6 +35,7 @@ namespace Tech_news.Controllers
                 int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
                 noticia.UsuarioId = usuarioId;
+                noticia.DataPublicacao = DateTime.Now;
 
                 _context.Add(noticia);
                 await _context.SaveChangesAsync();
@@ -57,20 +58,30 @@ namespace Tech_news.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, Noticia noticia)
+public async Task<IActionResult> Edit(int id, Noticia noticia)
+{
+    if (id != noticia.Id)
+        return NotFound();
+
+    if (ModelState.IsValid)
+    {
+        var existingUsuario = await _context.Usuarios.FindAsync(noticia.UsuarioId);
+
+        if (existingUsuario == null)
         {
-            if (id != noticia.Id)
-            return NotFound();
-
-            if (ModelState.IsValid)
-            {
-                _context.Noticias.Update(noticia);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
-
-            return View();
+            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            noticia.UsuarioId = usuarioId;
+            ModelState.Remove("UsuarioId");
         }
+
+        _context.Noticias.Update(noticia);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Index");
+    }
+
+    return View(noticia);
+}
+
 
         public async Task<IActionResult> Details(int? id) 
         {
