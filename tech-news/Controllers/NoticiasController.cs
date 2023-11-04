@@ -130,5 +130,7 @@ public async Task<IActionResult> Edit(int id, Noticia noticia)
             return RedirectToAction("Index");
 
         }
+
     }
-}
+
+    }
