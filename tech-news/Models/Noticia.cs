@@ -22,5 +22,16 @@ namespace Tech_news.Models
         public DateTime DataPublicacao { get; set; }
 
         public Usuarios Usuarios { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório selecionar a Tag da notícia!")]
+        public Tag Tag { get; set; }
+    }
+    public enum Tag
+    {
+        IA,
+        Hardware,
+        Software,
+        Games,
+        Outros
     }
 }
