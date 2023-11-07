@@ -25,13 +25,14 @@ namespace Tech_news.Controllers
             return View();
         }
 
-       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Titulo,Link")] Noticia noticia)
+        public async Task<IActionResult> Create([Bind("Id,Titulo,Link,Tag")] Noticia noticia)
         {
             if (ModelState.IsValid)
             {
+                noticia.Tag = (Tag)noticia.Tag;
                 int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
                 noticia.UsuarioId = usuarioId;
@@ -44,7 +45,7 @@ namespace Tech_news.Controllers
             return View(noticia);
         }
 
-        public async Task<IActionResult> Edit(int? id) 
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
                 return NotFound();
@@ -58,36 +59,36 @@ namespace Tech_news.Controllers
         }
 
         [HttpPost]
-public async Task<IActionResult> Edit(int id, Noticia noticia)
-{
-    if (id != noticia.Id)
-        return NotFound();
-
-    if (ModelState.IsValid)
-    {
-        var existingUsuario = await _context.Usuarios.FindAsync(noticia.UsuarioId);
-
-        if (existingUsuario == null)
+        public async Task<IActionResult> Edit(int id, Noticia noticia)
         {
-            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            noticia.UsuarioId = usuarioId;
-            ModelState.Remove("UsuarioId");
+            if (id != noticia.Id)
+                return NotFound();
+
+            if (ModelState.IsValid)
+            {
+                var existingUsuario = await _context.Usuarios.FindAsync(noticia.UsuarioId);
+
+                if (existingUsuario == null)
+                {
+                    int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+                    noticia.UsuarioId = usuarioId;
+                    ModelState.Remove("UsuarioId");
+                }
+
+                _context.Noticias.Update(noticia);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+
+            return View(noticia);
         }
 
-        _context.Noticias.Update(noticia);
-        await _context.SaveChangesAsync();
-        return RedirectToAction("Index");
-    }
 
-    return View(noticia);
-}
-
-
-        public async Task<IActionResult> Details(int? id) 
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
                 return NotFound(ModelState);
-            
+
             var dados = await _context.Noticias
                 .Include(d => d.Usuarios)
                 .FirstOrDefaultAsync(d => d.Id == id);
@@ -133,4 +134,4 @@ public async Task<IActionResult> Edit(int id, Noticia noticia)
 
     }
 
-    }
+}

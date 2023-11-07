@@ -13,12 +13,12 @@ namespace Tech_news.Controllers
         private readonly AppDbContext _context;
         public UsuariosController(AppDbContext context)
         {
-            _context = context; 
+            _context = context;
             //a propriedade _context, recebe o context da aplicação(injeção de dependência). Toda vez q precisar inserir/alterar um item, usaremos a variável context
         }
         public async Task<IActionResult> Index() //a função index lista os usuários cadastrados
         {
-        var dados = await _context.Usuarios.ToListAsync(); //o 'task' e o 'await/async' tornam essa função assíncrona
+            var dados = await _context.Usuarios.ToListAsync(); //o 'task' e o 'await/async' tornam essa função assíncrona
             return View(dados);
         }
 
@@ -34,7 +34,7 @@ namespace Tech_news.Controllers
         {
             var dados = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == usuarios.Email);
 
-            if(dados == null)
+            if (dados == null)
             {
                 ViewBag.Message = "Erro aqui!";
                 return View();
@@ -65,7 +65,7 @@ namespace Tech_news.Controllers
                 await HttpContext.SignInAsync(principal, props);
 
                 return Redirect("/");
-            } 
+            }
             else
             {
                 ViewBag.Message = "Usuário e/ou senha invalidos!";
@@ -127,7 +127,7 @@ namespace Tech_news.Controllers
 
         public async Task<ActionResult> Edit(int? id)
         {
-            if (id == null) 
+            if (id == null)
                 return NotFound();
 
             var dados = await _context.Usuarios.FindAsync(id);
@@ -141,7 +141,7 @@ namespace Tech_news.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, Usuarios usuarios)
         {
-            if (id!= usuarios.Id)
+            if (id != usuarios.Id)
                 return NotFound();
 
             if (ModelState.IsValid)
@@ -159,7 +159,7 @@ namespace Tech_news.Controllers
         {
             if (id == null)
                 return NotFound();
-            
+
             var dados = await _context.Usuarios.FindAsync(id);
 
             if (dados == null)
@@ -178,11 +178,11 @@ namespace Tech_news.Controllers
                 return NotFound();
 
             return View(dados);
-        
+
         }
 
         [HttpPost, ActionName("Delete")]
-        public async Task<ActionResult> DeleteConfirmed(int? id) 
+        public async Task<ActionResult> DeleteConfirmed(int? id)
         {
             if (id == null)
                 return NotFound();
@@ -198,5 +198,23 @@ namespace Tech_news.Controllers
             return RedirectToAction("Index");
 
         }
+
+        [Route("/usuarios/buscar")]
+        public async Task<IActionResult> Index(string search)
+        {
+            var users = _context.Usuarios.AsQueryable();
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                users = users.Where(u => u.Nome.Contains(search) || u.Email.Contains(search));
+            }
+
+            return View(await users.ToListAsync());
+        }
+
+
+
+
     }
+
 }

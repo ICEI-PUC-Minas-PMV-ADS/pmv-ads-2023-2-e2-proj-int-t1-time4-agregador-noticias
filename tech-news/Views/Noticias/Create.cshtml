@@ -28,11 +28,12 @@
                     <option value="">Selecione uma tag</option>
                     @foreach (var item in Enum.GetValues(typeof(Tag)))
                     {
-                        <option value="@item">@item</option>
+                        <option value="@((int)item)">@item</option>
                     }
                 </select>
                 <span asp-validation-for="Tag" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -45,5 +46,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
