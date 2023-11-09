@@ -136,11 +136,11 @@ namespace Tech_news.Controllers
         {
             endDate = endDate.AddDays(1);
 
-            var filteredNoticias = await _context.Noticias
+            var NoticiasFiltradas = await _context.Noticias
                 .Where(n => n.DataPublicacao >= startDate && n.DataPublicacao < endDate)
                 .ToListAsync();
 
-            return View("Index", filteredNoticias);
+            return View("Index", NoticiasFiltradas);
         }
 
         public async Task<IActionResult> FiltroHoje()

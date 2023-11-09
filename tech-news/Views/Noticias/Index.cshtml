@@ -4,20 +4,6 @@
     ViewData["Title"] = "Index";
 }
 
-@section Scripts {
-    <script>
-        $(document).ready(function () {
-            $('#filterButton').click(function () {
-                var startDate = $('#startDate').val();
-                var endDate = $('#endDate').val();
-
-                // Redirecione para a ação de filtro passando as datas como parâmetros
-                window.location.href = '@Url.Action("Filter", "Noticias")' + '?startDate=' + startDate + '&endDate=' + endDate;
-            });
-        });
-    </script>
-}
-
 <h1>Lista de notícias</h1>
 
 <p>
