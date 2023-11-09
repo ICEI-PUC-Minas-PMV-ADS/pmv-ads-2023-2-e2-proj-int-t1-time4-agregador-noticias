@@ -10,6 +10,17 @@
     <a asp-action="Create">Create New</a>
 </p>
 
+<div>
+    <p>Filtrar por Data:</p>
+    <div class="btn-group" role="group" aria-label="Presets de Filtro">
+        <a asp-controller="Noticias" asp-action="FiltroHoje" class="btn btn-secondary">Hoje</a>
+        <a asp-controller="Noticias" asp-action="FiltroOntem" class="btn btn-secondary">Ontem</a>
+        <a asp-controller="Noticias" asp-action="Filtro7Dias" class="btn btn-secondary">Últimos 7 Dias</a>
+        <a asp-controller="Noticias" asp-action="FiltroUltimoMes" class="btn btn-secondary">Último Mês</a>
+        <a asp-controller="Noticias" asp-action="Index" class="btn btn-secondary">Todas</a>
+    </div>
+</div>
+
 <table class="table">
     <thead>
         <tr>

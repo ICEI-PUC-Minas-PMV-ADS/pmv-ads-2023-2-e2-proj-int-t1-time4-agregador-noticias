@@ -132,6 +132,44 @@ namespace Tech_news.Controllers
 
         }
 
+        public async Task<IActionResult> FiltroData(DateTime startDate, DateTime endDate)
+        {
+            endDate = endDate.AddDays(1);
+
+            var NoticiasFiltradas = await _context.Noticias
+                .Where(n => n.DataPublicacao >= startDate && n.DataPublicacao < endDate)
+                .ToListAsync();
+
+            return View("Index", NoticiasFiltradas);
+        }
+
+        public async Task<IActionResult> FiltroHoje()
+        {
+            DateTime today = DateTime.Today;
+            return RedirectToAction("FiltroData", new { startDate = today, endDate = today });
+        }
+
+        public async Task<IActionResult> FiltroOntem()
+        {
+            DateTime yesterday = DateTime.Today.AddDays(-1);
+            return RedirectToAction("FiltroData", new { startDate = yesterday, endDate = yesterday });
+        }
+
+        public async Task<IActionResult> Filtro7Dias()
+        {
+            DateTime startDate = DateTime.Today.AddDays(-6);
+            DateTime endDate = DateTime.Today;
+            return RedirectToAction("FiltroData", new { startDate = startDate, endDate = endDate });
+        }
+
+        public async Task<IActionResult> FiltroUltimoMes()
+        {
+            DateTime startDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
+            DateTime endDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddDays(-1);
+
+            return RedirectToAction("FiltroData", new { startDate = startDate, endDate = endDate });
+        }
+
     }
 
 }
