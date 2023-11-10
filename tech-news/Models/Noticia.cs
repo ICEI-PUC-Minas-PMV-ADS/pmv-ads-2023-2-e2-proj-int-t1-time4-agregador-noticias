@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Tech_news.Models
@@ -25,6 +26,15 @@ namespace Tech_news.Models
 
         [Required(ErrorMessage = "Obrigatório selecionar a Tag da notícia!")]
         public Tag Tag { get; set; }
+
+        public class NoticiaFilterViewModel
+        {
+            public IEnumerable<Noticia> Noticias { get; set; }
+            public Tag? SelectedTag { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime EndDate { get; set; }
+            public IEnumerable<SelectListItem> TagList { get; set; }
+        }
     }
     public enum Tag
     {
