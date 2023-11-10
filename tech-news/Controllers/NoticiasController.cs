@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using Tech_news.Models;
+using static Tech_news.Models.Noticia;
 
 namespace Tech_news.Controllers
 {
@@ -15,8 +16,13 @@ namespace Tech_news.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var dados = await _context.Noticias.ToListAsync();
-            return View(dados);
+            var viewModel = new NoticiaFilterViewModel
+            {
+                Noticias = await _context.Noticias.ToListAsync(),
+                TagList = new SelectList(Enum.GetValues(typeof(Tag)))
+            };
+
+            return View(viewModel);
         }
 
         public IActionResult Create()
@@ -24,7 +30,6 @@ namespace Tech_news.Controllers
             ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email");
             return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -83,7 +88,6 @@ namespace Tech_news.Controllers
             return View(noticia);
         }
 
-
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -132,37 +136,68 @@ namespace Tech_news.Controllers
 
         }
 
-        public async Task<IActionResult> FiltroData(DateTime startDate, DateTime endDate)
+        [HttpGet]
+        public IActionResult FiltroTag(Tag? selectedTag)
+        {
+            var viewModel = new NoticiaFilterViewModel
+            {
+                TagList = new SelectList(Enum.GetValues(typeof(Tag))),
+                SelectedTag = selectedTag,
+            };
+
+            if (selectedTag != null)
+            {
+                viewModel.Noticias = _context.Noticias.Where(n => n.Tag == selectedTag).ToList();
+            }
+            else
+            {
+                viewModel.Noticias = _context.Noticias.ToList();
+                viewModel.SelectedTag = null;
+            }
+
+            return View("Index", viewModel);
+        }
+
+        [HttpGet]
+        public IActionResult FiltroData(DateTime startDate, DateTime endDate)
         {
             endDate = endDate.AddDays(1);
 
-            var NoticiasFiltradas = await _context.Noticias
+            var NoticiasFiltradas = _context.Noticias
                 .Where(n => n.DataPublicacao >= startDate && n.DataPublicacao < endDate)
-                .ToListAsync();
+                .ToList();
 
-            return View("Index", NoticiasFiltradas);
+            var viewModel = new Noticia.NoticiaFilterViewModel
+            {
+                Noticias = NoticiasFiltradas,
+                TagList = new SelectList(Enum.GetValues(typeof(Tag))),
+                StartDate = startDate,
+                EndDate = endDate
+            };
+
+            return View("Index", viewModel);
         }
 
-        public async Task<IActionResult> FiltroHoje()
+        public IActionResult FiltroHoje()
         {
             DateTime today = DateTime.Today;
             return RedirectToAction("FiltroData", new { startDate = today, endDate = today });
         }
 
-        public async Task<IActionResult> FiltroOntem()
+        public IActionResult FiltroOntem()
         {
             DateTime yesterday = DateTime.Today.AddDays(-1);
             return RedirectToAction("FiltroData", new { startDate = yesterday, endDate = yesterday });
         }
 
-        public async Task<IActionResult> Filtro7Dias()
+        public IActionResult Filtro7Dias()
         {
             DateTime startDate = DateTime.Today.AddDays(-6);
             DateTime endDate = DateTime.Today;
             return RedirectToAction("FiltroData", new { startDate = startDate, endDate = endDate });
         }
 
-        public async Task<IActionResult> FiltroUltimoMes()
+        public IActionResult FiltroUltimoMes()
         {
             DateTime startDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
             DateTime endDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddDays(-1);

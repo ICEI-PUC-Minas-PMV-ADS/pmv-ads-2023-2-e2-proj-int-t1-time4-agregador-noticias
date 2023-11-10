@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Tech_news.Models.Noticia>
+﻿@model Tech_news.Models.Noticia.NoticiaFilterViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -21,25 +21,35 @@
     </div>
 </div>
 
+<form asp-action="FiltroTag" method="get">
+    <div class="form-group">
+        <label asp-for="SelectedTag" class="control-label">Filtrar por Tag:</label>
+        <select asp-for="SelectedTag" class="form-control" asp-items="@Model.TagList">
+            <option value="">Selecione uma Tag</option>
+        </select>
+        <input type="submit" value="Filtrar" class="btn btn-primary" />
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Titulo)
+                @Html.DisplayNameFor(model => model.Noticias.FirstOrDefault().Titulo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Link)
+                @Html.DisplayNameFor(model => model.Noticias.FirstOrDefault().Link)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tag)
+                @Html.DisplayNameFor(model => model.Noticias.FirstOrDefault().Tag)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataPublicacao)
+                @Html.DisplayNameFor(model => model.Noticias.FirstOrDefault().DataPublicacao)
             </th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Noticias)
         {
             <tr>
                 <td>
