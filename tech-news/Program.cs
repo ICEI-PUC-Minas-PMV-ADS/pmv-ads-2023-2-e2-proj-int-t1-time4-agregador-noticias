@@ -42,7 +42,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Noticias}/{action=Index}/{id?}");
 
 // Seed database
 AppDbInitializer.Seed(app);
