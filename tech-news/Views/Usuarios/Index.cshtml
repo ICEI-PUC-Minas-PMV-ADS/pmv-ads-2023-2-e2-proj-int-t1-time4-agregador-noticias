@@ -44,9 +44,9 @@
                     @Html.DisplayFor(modelItem => item.Perfil)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Visualizar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning" >Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary" >Visualizar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" >Deletar</a>
                 </td>
             </tr>
         }
