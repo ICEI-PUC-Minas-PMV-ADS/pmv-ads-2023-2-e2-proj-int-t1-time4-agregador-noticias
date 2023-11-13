@@ -12,7 +12,6 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 - Guilherme Da Silva Santos Júnior
 - Guilherme Henrique Martins Pereira
-- Lucas Melo de Carvalho
 - Paulo Romano da Silva
 - Pedro Henrique Aguilar de Almeida
 - Pedro Henrique Batista Costa
