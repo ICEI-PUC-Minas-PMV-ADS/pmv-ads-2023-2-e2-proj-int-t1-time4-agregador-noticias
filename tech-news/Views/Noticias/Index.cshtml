@@ -59,7 +59,7 @@
                     @Html.DisplayFor(modelItem => item.Titulo)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Link)
+                    <a href="@item.Link" target="_blank"> @Html.DisplayFor(modelItem => item.Link) </a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Tag)
