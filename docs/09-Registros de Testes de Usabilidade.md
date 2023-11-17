@@ -6,27 +6,29 @@ Posteriormente, as sugestões apresentadas pelos participantes do teste são apr
 
 ## Método e participantes
 
-Para o teste, foi criado um formulário com 10 perguntas objetivas acerca da aplicação e um espaço para que os participantes pudessem adicionar comentários observando erros e sugerindo possíveis melhorias no site.
+Para o teste, foi criado um formulário com 9 questões com cada caso de teste analisado, aonde foram dadas as opções de: Sucesso; Sucesso, com dificuldades e Insucesso.
 
-O formulário foi respondido por 5 participantes, na faixa hetária entre 23 e 30 anos, que possuem alguma familiaridade com tecnologia.
+O formulário foi respondido por 4 participantes, na faixa hetária entre 23 e 30 anos, que possuem alguma familiaridade com tecnologia.
+ **![](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/blob/main/docs/img/resultados%20de%20testes.png)**
 
 ## Resultados
 
-- Sobre a afirmação "acho que gostaria de usar este sistema com frequência", 20% dos participantes marcaram a opção "discordo",40% marcaram a opção "neutro" e 40% a opção "concordo";
-- Os usuários concordaram que é uma aplicação inttuitiva, e que não precisariam de ajuda de um técnico para auxiliá-los;
-- Os participantes do teste acharam o sistema consistente e imaginam que a maioria das pessoas aprenderiam a usar este sistema rapidamente;
-- Sobre o conforto em utilizar o sistema, a maioria não se sentiu confortável, já que as alterações na parte visual da aplicação ainda não estão completas;
-- As informações foram encontradas de maneira fácil por 60% dos participantes, os outros 40% tiveram um pouco de dificuldade;
-- A maioria dos participantes não gostou da interface do sistema.
+-Todos os usuários tiveram sucesso nos seguintes casos de teste: CT-01 – Cadastrar perfil, CT-04 – Login de usuário,  CT-05 – Logout de usuário, CT-06 – Adicionar notícias.
+-50% dos usuários não tiveram sucesso em CT-02 – Alterar dados de conta.
+-25% teve sucesso com dificuldades e outros 25% não tiveram sucesso em CT-03 – Excluir conta.
+-25% dos usuários tiveram sucesso com dificuldades em CT-07 – Editar notícias, CT-08 – Excluir notícias.
+-25% dos usuários tiveram sucesso com dificuldades em CT-09 – Filtro de notícias, CT-10 – Visualizar Autor da Notícia.
+-25% dos usuários tiveram sucesso com dificuldades em CT-11 – Gerenciamento de Usuários, CT-12 – Gerenciamento de Notícias (adicionar, visualizar, editar e excluir) com usuário admin.
+
+Alguns usuários deixaram algumas sugestões e críticas relativas à sua experiência na aplicação:
+-Quando o admin edita uma notícia, ela deixa de aparecer se selecionado algum filtro.
+-Necessário adicionar modais de feedback para o usuário, confirmando adição ou alteração de informação. Não possui aba de usuário para gerenciamento de conteúdo, portando houve falha total em editar conta ou excluir.
 
 ## Conclusão
 
 Em relação às sugestões dos participantes do teste de usabilidade, chegamos às seguintes conclusões para melhorar o sistema:
 
-- Adicionar o botão de "Cadastre-se";
-- Adicionar a possibilidade de editar as próprias notícias;
-- Fazer com que a página principal exiba as notícias postadas;
-- Trabalhar na parte visual do site, deixando a interface mais agradável e os elementos com mais contraste entre si;
-- Incluir algumas imagens para deixar o site mais amigável;
-- Adicionar a funcionalidade de filtro de notícias;
+- Adicionar a possibilidade de editar e excluir as próprias notícias;
+- Adicionar feedbacks das ações realizadas;
 - Mostrar o nome do usuário nas notícias postadas por ele;
+- Corrigir o bug referente ao filtro.
