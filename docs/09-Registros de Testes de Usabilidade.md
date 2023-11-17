@@ -14,14 +14,21 @@ O formulário foi respondido por 4 participantes, na faixa hetária entre 23 e 3
 ## Resultados
 
 -Todos os usuários tiveram sucesso nos seguintes casos de teste: CT-01 – Cadastrar perfil, CT-04 – Login de usuário,  CT-05 – Logout de usuário, CT-06 – Adicionar notícias.
+
 -50% dos usuários não tiveram sucesso em CT-02 – Alterar dados de conta.
+
 -25% teve sucesso com dificuldades e outros 25% não tiveram sucesso em CT-03 – Excluir conta.
+
 -25% dos usuários tiveram sucesso com dificuldades em CT-07 – Editar notícias, CT-08 – Excluir notícias.
+
 -25% dos usuários tiveram sucesso com dificuldades em CT-09 – Filtro de notícias, CT-10 – Visualizar Autor da Notícia.
+
 -25% dos usuários tiveram sucesso com dificuldades em CT-11 – Gerenciamento de Usuários, CT-12 – Gerenciamento de Notícias (adicionar, visualizar, editar e excluir) com usuário admin.
 
 Alguns usuários deixaram algumas sugestões e críticas relativas à sua experiência na aplicação:
+
 -Quando o admin edita uma notícia, ela deixa de aparecer se selecionado algum filtro.
+
 -Necessário adicionar modais de feedback para o usuário, confirmando adição ou alteração de informação. Não possui aba de usuário para gerenciamento de conteúdo, portando houve falha total em editar conta ou excluir.
 
 ## Conclusão
