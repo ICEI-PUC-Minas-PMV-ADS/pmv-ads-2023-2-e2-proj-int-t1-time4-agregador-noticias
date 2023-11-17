@@ -2,26 +2,25 @@
 
 ## Teste 1 - Login como administrador
 
-[Assista ao vídeo](https://www.youtube.com/watch?v=v1dX0oBW0GA)
+[Assista ao vídeo](https://youtu.be/L-6RFkKR8aA)
 
 ## Teste 2 - Login como usuário comum
 
-[Assista ao vídeo](https://www.youtube.com/watch?v=v4ZaojLUV_o)
+[Assista ao vídeo](https://youtu.be/UjbxbwKh64g)
 
 ### CT-01 – Cadastrar perfil
 
 O usuário deve ser capaz de criar uma conta pessoal.
-Por enquanto, apenas perfis de administrador têm permissão de criar contas, portanto essa funcionalidade ainda não foi completamente implementada.
+Tanto usuários comuns podem se cadastrar e usuários admin podem criar novos perfis, logo a funcionalidade foi implementada com sucesso.
 
 ### CT-02 – Alterar dados de conta
 
 O usuário deve ser capaz de alterar dados da sua conta pessoal.
-Tanto usuários comuns como administradores têm permissão de alterar suas respectivas contas, portanto a funcionalidade foi implementada com sucesso.
-
+Apenas usuários admin têm a opção de editar suas contas, logo essa funcionalidade está incompleta e precisa de correção.
 ### CT-03 – Excluir conta
 
 O usuário deve ser capaz de excluir sua conta pessoal
-Tanto usuários comuns como administradores têm permissão de deletar suas respectivas contas, portanto a funcionalidade foi implementada com sucesso.
+Apenas usuários admin têm a opção de excluir suas contas, logo essa funcionalidade está incompleta e precisa de correção.
 
 ### CT-04 – Login de usuário
 
@@ -46,12 +45,12 @@ Por enquanto apenas administradores possuem essa permissão, portanto, é uma co
 ### CT-09 – Filtro de notícias
 
 O usuário deve ser capaz de filtrar as notícias, O site deve ter um sistema de “tags”, Site deve ter um sistema de filtro por tempo.
-Por enquanto as notícias não possuem tag e data de postagem, portanto a funionalidade será aplicada no próximo módulo.
+Os filtros de data, tag e pesquisa foram implementados e estão funcionando, logo as funcionalidades foram implementadas com sucesso.
 
 ### CT-10 – Exibir Autor da Notícia
 
 Site deve exibir o usuário que adicionou a notícia.
-A página de notícias ainda não exibe o usuário responsável por ela, portanto a funcionalidade será aplicada no próximo módulo.
+A página de notícias ainda não exibe o usuário responsável por ela, apenas quando o usuário clica em "Detalhes", portanto a funcionalidade foi aplicada parcialmente.
 
 ### CT-11 – Gerenciamento de Usuários, CT-12 – Gerenciamento de Notícias
 
