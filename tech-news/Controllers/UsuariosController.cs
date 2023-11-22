@@ -4,18 +4,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using Tech_news.Models;
+using Tech_news.Authorization;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace Tech_news.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class UsuariosController : Controller
     {
         private readonly AppDbContext _context;
-        public UsuariosController(AppDbContext context)
+        private readonly IAuthorizationService _authorizationService;
+        public UsuariosController(AppDbContext context, IAuthorizationService authorizationService)
         {
             _context = context;
             //a propriedade _context, recebe o context da aplicação(injeção de dependência). Toda vez q precisar inserir/alterar um item, usaremos a variável context
+            _authorizationService = authorizationService;
+
         }
+
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index() //a função index lista os usuários cadastrados
         {
             var dados = await _context.Usuarios.ToListAsync(); //o 'task' e o 'await/async' tornam essa função assíncrona
@@ -36,7 +43,7 @@ namespace Tech_news.Controllers
 
             if (dados == null)
             {
-                ViewBag.Message = "Erro aqui!";
+                ViewBag.Message = "Verifique os dados de usuário e/ou senha!";
                 return View();
             }
 
@@ -132,18 +139,17 @@ namespace Tech_news.Controllers
 
             var dados = await _context.Usuarios.FindAsync(id);
 
-            if (dados == null)
+            if (dados == null )
                 return NotFound();
 
             return View(dados);
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, Usuarios usuarios)
         {
-            if (id != usuarios.Id)
-                return NotFound();
-
+            
             if (ModelState.IsValid)
             {
                 usuarios.Senha = BCrypt.Net.BCrypt.HashPassword(usuarios.Senha);
@@ -154,6 +160,7 @@ namespace Tech_news.Controllers
 
             return View();
         }
+
 
         public async Task<ActionResult> Details(int? id)
         {
@@ -199,6 +206,7 @@ namespace Tech_news.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [Route("/usuarios/buscar")]
         public async Task<IActionResult> Index(string search)
         {
@@ -212,9 +220,82 @@ namespace Tech_news.Controllers
             return View(await users.ToListAsync());
         }
 
+        [Authorize]
+        public async Task<IActionResult> EditProfile()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _context.Usuarios.FindAsync(int.Parse(userId));
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View("EditProfile", user);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> EditProfile(Usuarios usuarios)
+        {
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out var currentUserId))
+            {
+                return Forbid(); // Retornar um código 403 se o usuário não estiver autorizado
+            }
+
+            if (currentUserId != usuarios.Id)
+            {
+                return Forbid(); // Retornar um código 403 se o usuário não estiver autorizado
+            }
+
+            if (ModelState.IsValid)
+            {
+                // Carregue o usuário do banco de dados
+                var userFromDb = await _context.Usuarios.FindAsync(usuarios.Id);
+
+                if (userFromDb == null)
+                {
+                    return NotFound();
+                }
+
+                // Atualize apenas os campos permitidos
+                userFromDb.Nome = usuarios.Nome;
+                userFromDb.Email = usuarios.Email;
+                userFromDb.Senha = BCrypt.Net.BCrypt.HashPassword(usuarios.Senha);
+
+                // Salve as alterações
+                await _context.SaveChangesAsync();
+
+                var updatedUser = await _context.Usuarios.FindAsync(currentUserId);
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, updatedUser.Nome),
+                    new Claim(ClaimTypes.Email, updatedUser.Email),
+                    new Claim(ClaimTypes.NameIdentifier, updatedUser.Id.ToString()),
+                    new Claim(ClaimTypes.Role, updatedUser.Perfil.ToString())
+                };
+
+                var usuarioIdentity = new ClaimsIdentity(claims, "login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(usuarioIdentity);
+
+                await HttpContext.SignInAsync(principal); // Reautenticar o usuário
+
+
+                return RedirectToAction("Index", "Noticias");
+            }
+
+            return View();
+        }
 
 
 
+        private bool IsUserAuthorized(int userId)
+        {
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return userIdClaim != null && int.TryParse(userIdClaim, out var currentUserId) && currentUserId == userId;
+        }
     }
 
 }
