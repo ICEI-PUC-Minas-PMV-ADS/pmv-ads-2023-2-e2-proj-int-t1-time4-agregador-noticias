@@ -1,4 +1,5 @@
-﻿@model Tech_news.Models.Noticia.NoticiaFilterViewModel
+﻿@using System.Security.Claims;
+@model Tech_news.Models.Noticia.NoticiaFilterViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -25,12 +26,12 @@
 </div>
 
 <form asp-action="FiltroTag" method="get">
-    <div class="form-group">
+    <div class="form-group mt-2">
         <label asp-for="SelectedTag" class="control-label">Filtrar por Tag:</label>
-        <select asp-for="SelectedTag" class="form-control" asp-items="@Model.TagList">
+        <select asp-for="SelectedTag" class="form-control w-25" asp-items="@Model.TagList">
             <option value="">Selecione uma Tag</option>
         </select>
-        <input type="submit" value="Filtrar" class="btn btn-primary" />
+        <input type="submit" value="Filtrar" class="btn btn-primary mt-2" />
     </div>
 </form>
 
@@ -68,14 +69,18 @@
                     @Html.DisplayFor(modelItem => item.DataPublicacao)
                 </td>
 
-                @if (User.IsInRole("Admin"))
+                @if (User.Identity.IsAuthenticated)
                 {
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Detalhes</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Deletar</a>
-                    </td>
+                    var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+                    if (item.UsuarioId == userId || User.IsInRole("Admin"))
+                    {
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Detalhes</a>
+                        </td>
+                    }
                 }
+
             </tr>
         }
     </tbody>
