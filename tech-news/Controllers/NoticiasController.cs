@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -50,6 +51,7 @@ namespace Tech_news.Controllers
             return View(noticia);
         }
 
+        [Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -64,6 +66,7 @@ namespace Tech_news.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Edit(int id, Noticia noticia)
         {
             if (id != noticia.Id)
@@ -88,6 +91,7 @@ namespace Tech_news.Controllers
             return View(noticia);
         }
 
+        [Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -104,6 +108,7 @@ namespace Tech_news.Controllers
 
         }
 
+        [Authorize(Roles = "Admin, User")]
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -119,6 +124,7 @@ namespace Tech_news.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Admin, User")]
         public async Task<ActionResult> DeleteConfirmed(int? id)
         {
             if (id == null)
