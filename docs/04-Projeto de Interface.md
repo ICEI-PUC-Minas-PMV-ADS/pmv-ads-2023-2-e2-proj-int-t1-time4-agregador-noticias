@@ -7,7 +7,7 @@
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/assets/111918966/f2d4a0b2-ba64-473a-b42d-d6a83fff9e75)
 
-O projeto busca atender as espectivas do usuário de maneira simples e dinamica, onde o foco é simplesmente a notícia. Mantando uma interface limpa e responsiva ao desktop e dispositivos móveis.
+O projeto busca atender as expectivas do usuário de maneira simples e dinamica, onde o foco é simplesmente a notícia. Mantando uma interface limpa e responsiva ao desktop e dispositivos móveis.
 
 ## User Flow
 
