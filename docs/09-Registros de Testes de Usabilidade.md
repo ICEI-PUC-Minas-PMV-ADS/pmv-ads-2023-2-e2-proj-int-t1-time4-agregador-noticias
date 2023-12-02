@@ -11,6 +11,9 @@ A aplicação é responsiva em dispositivos móveis também, como demonstrado na
 **![](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/blob/main/docs/img/responsivo.png)**
 
 ## CT-02 – Interação com banco de dados
+A aplicação possui comunicação com banco de dados, como exemplificado na imagem a seguir:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/blob/main/docs/img/banco.png)
+
 
 ## CT-03 - Acessível publicamente na internet
 
