@@ -8,7 +8,11 @@ Nesse relatório final, serão apresentados os requisitos funcionais e não-func
 # Relatório Final de Testes
 
 Na penúltima fase de desenvolvimento do projeto, algumas funcionalidades ficaram pendentes: CT-02 – Alterar dados de conta, CT-03 – Excluir conta, CT-07 – Editar notícias, CT-08 – Excluir notícias, CT-10 – Exibir Autor da Notícia.
-Segue abaixo a tratativa de cada requisito:
+Segue abaixo as respostas dos usuários teste e a tratativa de cada requisito:
+
+**![](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time4-agregador-noticias/blob/main/docs/img/respostas2.png)**
+
+
 
 ## CT-02 – Alterar dados de conta
 
