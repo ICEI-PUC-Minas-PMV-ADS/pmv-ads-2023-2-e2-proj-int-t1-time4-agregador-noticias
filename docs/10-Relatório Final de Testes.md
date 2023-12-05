@@ -16,15 +16,15 @@ Segue abaixo as respostas dos usuários teste e a tratativa de cada requisito:
 
 ## CT-02 – Alterar dados de conta
 
-Agora tanto administradores quanto usuários comuns conseguem alterar os dados da própria conta, portanto, a funcionalidade foi implementada com sucesso.
+Na segunda fase de desenvolvimento, apenas administradores conseguiam editar os dados da própria conta e das contas de terceiros. Agora tanto administradores quanto usuários comuns conseguem alterar os dados da própria conta, portanto, a funcionalidade foi implementada com sucesso.
 
 ## CT-03 – Excluir conta  
 
-Essa funcionalidade permanece parcialmente pendente, já que numa escala de prioridades, ela foi definida como "baixa prioridade". Logo, apenas usuários Admin tem a autorização de excluir suas próprias contas.
+Na segunda fase de desenvolvimento, apenas administradores conseguiam excluir a própria conta e as de terceitos. Essa funcionalidade permanece parcialmente pendente, já que numa escala de prioridades, ela foi definida como "baixa prioridade". Logo, apenas usuários Admin tem a autorização de excluir suas próprias contas.
 
 ## CT-07 – Editar notícias, CT-08 – Excluir notícias
 
-Ambas as funcionalidades foram implementadas com sucesso, usuários comuns conseguem editar e excluir as próprias notícias.
+Antes, apenas administradores conseguiam editar e excluir notícias. Agora ambas as funcionalidades foram implementadas com sucesso, usuários comuns conseguem editar e excluir as próprias notícias.
 
 ## CT-10 – Exibir Autor da Notícia
 
