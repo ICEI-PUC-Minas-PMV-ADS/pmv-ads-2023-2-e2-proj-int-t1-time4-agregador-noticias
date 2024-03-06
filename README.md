@@ -18,7 +18,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Orientador
 
-- Rosilane Ribeiro da Mota
+- Cristiano de Macêdo Neto
 
 ## Instruções de utilização
 
